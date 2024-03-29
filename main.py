@@ -3,6 +3,7 @@ import sml
 import robot_cmd as rcmd
 import mancala as mcl, con_four as con4
 
+import base64
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
 from datetime import datetime, timezone, timedelta
@@ -12,7 +13,7 @@ from latindict import latinDict
 from handict import loadDatabase as loadHan
 from errors import ArgMissingError, EmptyMsgError, OptConflictError, OptError, OverlengthError, UnsupportedGameError
 
-TOKEN = "MTA3MTQ2MjQzNDk2OTIzMTM4MA.GfI5Pa.ambYmyxEkG-jMwX1MrmM_R3VLoTeIL_RYWSBSA"
+TOKEN = base64.b64decode("TVRBM01UUTJNalF6TkRrMk9USXpNVE00TUEuRzJHTVctLnRvbnJ6Mm1tLWxqM2lLWk8yY1VyejlQMWJITVNXeVZDQ3RjWXZ3").decode()
 
 intents = discord.Intents.default()
 intents.message_content = True
